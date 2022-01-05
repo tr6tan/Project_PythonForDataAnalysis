@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API FLask Prediction Rents Bike from Seoul</title>
+
+</head>
+
+<body style="background: #795b5c;">
+	<div class="login">
+		<h2>Prediction Of Bike Sharing Rents</h2>
+
+		<form action="{{ url_for('predict')}}" method="post">
+
+			<pre></pre>
+			<label for="Seasons">Seasons:</label>
+			<input list="seasons" id="season" name="Seasons" placeholder="Seasons" required="required">
+			</input>
+			
+
+			<pre></pre>
+			<label for="Temperature">Temperature:</label>
+			<input type="text" name="Temperature" placeholder="in °C" required="required" />
+			
+			<pre></pre>
+			<label for="Humidity">Humidity:</label>
+			<input type="text" name="Humidity" placeholder="in %" required="required" />
+			
+
+			<pre></pre>
+			<label for="Wind speed">Wind speed:</label>
+			<input type="text" name="Wind speed" placeholder="in m/s" required="required" />
+			
+			<pre></pre>
+			<label for="Visibility">Visibility:</label>
+			<input type="text" name="Visibility" placeholder="in (10m)" required="required" />
+			
+			<pre></pre>
+			<label for="Solar Radiation">Solar Radiation:</label>
+			<input type="text" name="Solar Radiation" placeholder="in MJ/m2" required="required" />
+			
+			<pre></pre>
+			<label for="Rainfall">Rainfall:</label>
+			<input type="text" name="Rainfall" placeholder="in mm" required="required" />
+			
+			<pre></pre>
+			<label for="Snowfall">Snowfall:</label>
+			<input type="text" name="Snowfall" placeholder="in cm" required="required" />
+			
+			<pre></pre>
+			<label for="Holiday">Holiday:</label>
+			<input list="holidays" id="holiday" name="Holiday" placeholder="Holiday" required="required">
+			</input>
+			
+			<pre></pre>
+			<label for="Functioning">Functioning Day:</label>
+			<input list="functioningDays" id="functioningDay" name="Functioning" placeholder="Functioning Day" required="required">
+			</input>
+			
+			<pre></pre>
+			<label for="Hour">Hour:</label>
+			<input type="text" name="Hour" placeholder="from 1 to 24" required="required" />
+
+			<pre></pre>
+			<label for="Day">Day:</label>
+
+			<input type="Day" name="Day" placeholder="number" required="required" />
+			
+			<pre></pre>
+			<label for="Month">Month:</label>
+			<input list="months" id="month" name="Month" placeholder="Month" required="required">
+			</input>
+			
+			<pre></pre>
+			<label for="Year">Year:</label>
+			<input type="text" name="Year" placeholder="number" required="required" />
+
+			<pre></pre>
+			<label for="Weekday">Weekday:</label>
+			<input list="weekdays" id="weekday" name="Weekday" placeholder="Weekday" required="required">
+			</input>
+
+			<pre>
+			<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+			</pre>
+		</form>
+
+		<br>
+		{{ prediction_text }}
+
+	</div>
+</body>
+
+
+
+</html>
